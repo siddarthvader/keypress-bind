@@ -30,15 +30,14 @@ export default function HomeWithContext() {
 
 function KeyboardShortcut(props: ComponentItem) {
   // console.log("props.id", props.id);
-  let listener = useRef<Listener | boolean>(false);
+  let listener = useRef<Listener>();
   let [bgColor, setbgColor] = useState<string>(randomColor());
 
   const setStore = useSetShortcuts();
 
   useEffect(() => {
     if (isWindowContext) {
-      listener.current =
-        typeof window !== "undefined" && new window.keypress.Listener();
+      listener.current = new window.keypress.Listener();
 
       if (listener.current) {
         setStore(props.id, props.combo);
@@ -51,8 +50,7 @@ function KeyboardShortcut(props: ComponentItem) {
 
     return () => {
       if (listener.current) {
-        listener.current.reset();
-        listener.current = false;
+        listener.current.destroy();
       }
     };
   }, []);
