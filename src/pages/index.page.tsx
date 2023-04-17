@@ -8,26 +8,6 @@ import {
 } from "./store-context";
 
 const isWindowContext = typeof window !== "undefined";
-
-function Home() {
-  return (
-    <div className="flex flex-wrap w-full h-full">
-      {componentList.map((component, index) => {
-        return <KeyboardShortcut key={index} {...component} />;
-      })}
-      <ShowShortCuts />
-    </div>
-  );
-}
-
-export default function HomeWithContext() {
-  return (
-    <StoreContextProvider>
-      <Home />
-    </StoreContextProvider>
-  );
-}
-
 function KeyboardShortcut(props: ComponentItem) {
   // console.log("props.id", props.id);
   let listener = useRef<Listener>();
@@ -77,6 +57,25 @@ function ShowShortCuts() {
         </div>
       ))}
     </div>
+  );
+}
+
+function Home() {
+  return (
+    <div className="flex flex-wrap w-full h-full">
+      {componentList.map((component, index) => {
+        return <KeyboardShortcut key={index} {...component} />;
+      })}
+      <ShowShortCuts />
+    </div>
+  );
+}
+
+export default function HomeWithContext() {
+  return (
+    <StoreContextProvider>
+      <Home />
+    </StoreContextProvider>
   );
 }
 
