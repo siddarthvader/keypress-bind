@@ -2,10 +2,12 @@ type ComponentItem = {
   combo: string;
   callbck: () => void;
   description: string;
+  id: string;
 };
 
 const componentList: ComponentItem[] = [
   {
+    id: "component_a",
     combo: "shift a",
     callbck: () => {
       console.log("hello from component A");
@@ -13,6 +15,7 @@ const componentList: ComponentItem[] = [
     description: "Component A, press shift a to change its color",
   },
   {
+    id: "component_b",
     combo: "esc",
     callbck: () => {
       console.log("hello from component B");
@@ -20,6 +23,7 @@ const componentList: ComponentItem[] = [
     description: "Component B, press Esx to change its color",
   },
   {
+    id: "component_c",
     combo: "alt ctrl c",
     callbck: () => {
       console.log("hello from component C");
