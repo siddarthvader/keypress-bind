@@ -10,7 +10,7 @@ export default function Document() {
         <Main />
         <NextScript />
         <Script
-          src="https://cdnjs.cloudflare.com/ajax/libs/keypress/2.1.5/keypress.min.js"
+          src="keypress/keypress-2.1.5.min.js"
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
           strategy="afterInteractive"
