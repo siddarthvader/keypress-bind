@@ -1,6 +1,9 @@
 lockfileVersion: '6.0'
 
 dependencies:
+  '@types/keypress.js':
+    specifier: ^2.1.1
+    version: 2.1.1
   '@types/node':
     specifier: 18.15.11
     version: 18.15.11
@@ -274,6 +277,10 @@ packages:
 
   /@types/json5@0.0.29:
     resolution: {integrity: sha512-dRLjCWHYg4oaA77cxO64oO+7JwCwnIzkZPdrrC71jQmQtlhM556pwKo5bUzqvZndkVbeFLIIi+9TC40JNF5hNQ==}
+    dev: false
+
+  /@types/keypress.js@2.1.1:
+    resolution: {integrity: sha512-3Hz/IVkr+PLQX+OCcWjT7VFDpbrriFKNu+RZSyFhw9j1d/Kq86ppwcXImlrmyt4O6PKNL8Iold91XHquKfThIg==}
     dev: false
 
   /@types/node@18.15.11:
