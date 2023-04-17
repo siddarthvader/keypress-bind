@@ -13,7 +13,7 @@ export default function Document() {
           src="keypress/keypress-2.1.5.min.js"
           crossOrigin="anonymous"
           referrerPolicy="no-referrer"
-          strategy="lazyOnload"
+          strategy="beforeInteractive"
         />
       </body>
     </Html>

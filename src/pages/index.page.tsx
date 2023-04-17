@@ -8,8 +8,8 @@ import {
 } from "./store-context";
 
 const isWindowContext = typeof window !== "undefined";
+
 function KeyboardShortcut(props: ComponentItem) {
-  // console.log("props.id", props.id);
   let listener = useRef<Listener>();
   let [bgColor, setbgColor] = useState<string>(randomColor());
 
